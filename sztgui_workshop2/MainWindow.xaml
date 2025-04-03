@@ -26,6 +26,13 @@
         <ListBox x:Name="lbox_left" Grid.Column="0"
                  ItemsSource="{Binding HumanSuperHeroes}"
                  HorizontalContentAlignment="Stretch">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="BorderBrush" Value="Black" />
+                    <Setter Property="Margin" Value="5" />
+                </Style>
+            </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -63,6 +70,13 @@
         <ListBox x:Name="lbox_right" Grid.Column="2"
          ItemsSource="{Binding MutantSuperHeroes}"
          HorizontalContentAlignment="Stretch">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="BorderBrush" Value="Black" />
+                    <Setter Property="Margin" Value="5" />
+                </Style>
+            </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
