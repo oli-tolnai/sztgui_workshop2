@@ -37,13 +37,6 @@ namespace sztgui_workshop2
 
         private void Speedup_Click(object sender, RoutedEventArgs e)
         {
-            //if (lbox_right.SelectedItem is SuperHero selectedMutant)
-            //{
-            //    selectedMutant.Speed += 10;
-            //    lbox_right.Items.Refresh();
-            //}
-
-            //increase all mutant speed with  10 percent
             if (this.DataContext is MainWindowViewModel vm)
             {
                 foreach (var mutant in vm.MutantSuperHeroes)
@@ -52,9 +45,6 @@ namespace sztgui_workshop2
                 }
                 lbox_right.Items.Refresh();
             }
-
-
-
         }
     }
 }

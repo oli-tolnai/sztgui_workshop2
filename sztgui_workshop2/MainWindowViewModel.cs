@@ -47,15 +47,15 @@ namespace sztgui_workshop2
         {
             this.HumanSuperHeroes = new BindingList<SuperHero>()
             {
-                new SuperHero() { Name = "Batman", Strength = 80, Speed = 60, IsMutant = false },
-                new SuperHero() { Name = "Superman", Strength = 100, Speed = 90, IsMutant = false },
-                new SuperHero() { Name = "Spiderman", Strength = 70, Speed = 80, IsMutant = false }
+                new SuperHero() { Name = "Batman", Strength = 30, Speed = 50, IsMutant = false },
+                new SuperHero() { Name = "Superman", Strength = 20, Speed = 30, IsMutant = false },
+                new SuperHero() { Name = "Spiderman", Strength = 50, Speed = 20, IsMutant = false }
             };
             this.MutantSuperHeroes = new BindingList<SuperHero>()
             {
-                new SuperHero() { Name = "Wolverine", Strength = 90, Speed = 70, IsMutant = true },
-                new SuperHero() { Name = "Storm", Strength = 85, Speed = 75, IsMutant = true },
-                new SuperHero() { Name = "Cyclops", Strength = 80, Speed = 65, IsMutant = true }
+                new SuperHero() { Name = "Wolverine", Strength = 90, Speed = 10, IsMutant = true },
+                new SuperHero() { Name = "Storm", Strength = 85, Speed = 35, IsMutant = true },
+                new SuperHero() { Name = "Cyclops", Strength = 80, Speed = 25, IsMutant = true }
             };
         }
 
