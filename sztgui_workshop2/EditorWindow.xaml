@@ -14,8 +14,8 @@
             <TextBox Text="{Binding Strength}" MinHeight="30" FontSize="20"/>
             <Label Content="Speed" FontSize="20"/>
             <TextBox Text="{Binding Speed}" MinHeight="30" FontSize="20"/>
-            <CheckBox Content="Mutant" IsChecked="{Binding IsSuperHero}" Margin="5"/>
-            <Button Content="Save" Width="75" Margin="5" Click="SaveButton_Click"/>
+            <CheckBox x:Name="_checkBox" Content="Mutant" IsChecked="{Binding IsSuperHero}" Margin="5"/>
+            <Button Content="Save" Width="350" Height="30" FontSize="20" Margin="5" Click="SaveButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

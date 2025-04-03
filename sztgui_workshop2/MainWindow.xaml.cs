@@ -25,6 +25,7 @@ namespace sztgui_workshop2
         private void Add_hero_Click(object sender, RoutedEventArgs e)
         {
             SuperHero newHero = new SuperHero();
+            
             EditorWindow editor = new EditorWindow(newHero);
 
             if (editor.ShowDialog() == true && this.DataContext is MainWindowViewModel vm)
