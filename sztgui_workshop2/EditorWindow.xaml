@@ -1,0 +1,21 @@
+﻿<Window x:Class="sztgui_workshop2.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sztgui_workshop2"
+        mc:Ignorable="d"
+        Title="EditorWindow" Height="300" Width="350">
+    <Grid>
+        <StackPanel>
+            <Label Content="Name" FontSize="20"/>
+            <TextBox Text="{Binding Name}" MinHeight="30" FontSize="20"/>
+            <Label Content="Strength" FontSize="20"/>
+            <TextBox Text="{Binding Strength}" MinHeight="30" FontSize="20"/>
+            <Label Content="Speed" FontSize="20"/>
+            <TextBox Text="{Binding Speed}" MinHeight="30" FontSize="20"/>
+            <CheckBox Content="Mutant" IsChecked="{Binding IsSuperHero}" Margin="5"/>
+            <Button Content="Save" Width="75" Margin="5" Click="SaveButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
