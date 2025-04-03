@@ -82,11 +82,6 @@ namespace sztgui_workshop2
                 hero.Speed += 10;
                 AvgMutantStrength = (int)MutantSuperHeroes.Average(h => h.Strength);
             }
-            else
-            {
-                hero.Speed += 5;
-                AvgHumanStrength = (int)HumanSuperHeroes.Average(h => h.Strength);
-            }
         }
 
         public void RemoveHero(SuperHero hero)
