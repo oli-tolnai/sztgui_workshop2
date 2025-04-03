@@ -6,13 +6,85 @@
         xmlns:local="clr-namespace:sztgui_workshop2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+
+    <Window.Resources>
+        <local:QuantityToColorConverter x:Key="QuantityToColorConverter"/>
+    </Window.Resources>
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*" />
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="4*" />
         </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="lbox_left" Grid.Column="0"
+                 ItemsSource="{Binding HumanSuperHeroes}"
+                 HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <Label Content="{Binding Name}" />
+                        <Label Content="{Binding Strength}" />
+                        <Label Content="{Binding Speed}" />
+                        <StackPanel>
+                            <ProgressBar Value="{Binding Quantity}" Minimum="0" Maximum="20"
+                                        Height="10" Width="150" >
+                                <ProgressBar.Foreground>
+                                    <Binding Path="Quantity" Converter="{StaticResource QuantityToColorConverter}"/>
+                                </ProgressBar.Foreground>
+                            </ProgressBar>
+                            <ProgressBar Value="{Binding Quantity}" Minimum="0" Maximum="20"
+                                        Height="10" Width="150" >
+                                <ProgressBar.Foreground>
+                                    <Binding Path="Quantity" Converter="{StaticResource QuantityToColorConverter}"/>
+                                </ProgressBar.Foreground>
+                            </ProgressBar>
+                        </StackPanel>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Column="1" >
+            <Button  Content="Add hero" Height="30" Margin="5" FontSize="16" Click="Add_hero_Click"/>
+            <Button  Content="Speed up mutants" Height="30" Margin="5" FontSize="16" Click="Speedup_Click"/>
+        </StackPanel>
+
+        <ListBox x:Name="lbox_right" Grid.Column="2"
+         ItemsSource="{Binding MutantSuperHeroes}"
+         HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <Label Content="{Binding Name}" />
+                        <Label Content="{Binding Strength}" />
+                        <Label Content="{Binding Speed}" />
+                        <StackPanel>
+                            <ProgressBar Value="{Binding Quantity}" Minimum="0" Maximum="20"
+                                Height="10" Width="150" >
+                                <ProgressBar.Foreground>
+                                    <Binding Path="Quantity" Converter="{StaticResource QuantityToColorConverter}"/>
+                                </ProgressBar.Foreground>
+                            </ProgressBar>
+                            <ProgressBar Value="{Binding Quantity}" Minimum="0" Maximum="20"
+                                Height="10" Width="150" >
+                                <ProgressBar.Foreground>
+                                    <Binding Path="Quantity" Converter="{StaticResource QuantityToColorConverter}"/>
+                                </ProgressBar.Foreground>
+                            </ProgressBar>
+                        </StackPanel>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
-    
-    
+
+
+
 </Window>

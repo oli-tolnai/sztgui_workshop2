@@ -19,6 +19,17 @@ namespace sztgui_workshop2
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
+        }
+
+        private void Add_hero_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Speedup_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
