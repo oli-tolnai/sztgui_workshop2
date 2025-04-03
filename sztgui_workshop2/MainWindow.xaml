@@ -35,29 +35,33 @@
             </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <WrapPanel>
-                        <Label Content="{Binding Name}" VerticalContentAlignment="Center"/>
-                        <StackPanel>
-                            <WrapPanel>
-                                <Label Content="{Binding Strength}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="{Binding Name}" VerticalContentAlignment="Center" FontSize="20"/>
+                        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="5">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="2px">
+                                <TextBlock Text="{Binding Strength, StringFormat='Strength: {0} '}"  />
                                 <ProgressBar Value="{Binding Strength}" Minimum="0" Maximum="100"
-                                        Height="10" Width="150" >
+                                    Height="15" Width="100" >
                                     <ProgressBar.Foreground>
                                         <Binding Path="Strength" Converter="{StaticResource QuantityToColorConverter}"/>
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
-                            </WrapPanel>
-                            <WrapPanel>
-                                <Label Content="{Binding Speed}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="2px">
+                                <TextBlock Text="{Binding Speed, StringFormat='Strength: {0} '}" />
                                 <ProgressBar Value="{Binding Speed}" Minimum="0" Maximum="100"
-                                        Height="10" Width="150" >
+                                                Height="15" Width="100" >
                                     <ProgressBar.Foreground>
                                         <Binding Path="Speed" Converter="{StaticResource QuantityToColorConverter}"/>
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
-                            </WrapPanel>
+                            </StackPanel>
                         </StackPanel>
-                    </WrapPanel>
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
@@ -79,29 +83,33 @@
             </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <WrapPanel>
-                        <Label Content="{Binding Name}" VerticalContentAlignment="Center"/>
-                        <StackPanel>
-                            <WrapPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="{Binding Name}" VerticalContentAlignment="Center" FontSize="20"/>
+                        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="5">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <Label Content="{Binding Strength}" />
                                 <ProgressBar Value="{Binding Strength}" Minimum="0" Maximum="100"
-                                Height="10" Width="150" >
+                                    Height="10" Width="150" >
                                     <ProgressBar.Foreground>
                                         <Binding Path="Strength" Converter="{StaticResource QuantityToColorConverter}"/>
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
-                            </WrapPanel>
-                            <WrapPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <Label Content="{Binding Speed}" />
                                 <ProgressBar Value="{Binding Speed}" Minimum="0" Maximum="100"
-                                Height="10" Width="150" >
+                                                Height="10" Width="150" >
                                     <ProgressBar.Foreground>
                                         <Binding Path="Speed" Converter="{StaticResource QuantityToColorConverter}"/>
                                     </ProgressBar.Foreground>
                                 </ProgressBar>
-                            </WrapPanel>
+                            </StackPanel>
                         </StackPanel>
-                    </WrapPanel>
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
