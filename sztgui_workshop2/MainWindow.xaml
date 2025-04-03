@@ -29,22 +29,26 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-                        <Label Content="{Binding Name}" />
-                        <Label Content="{Binding Strength}" />
-                        <Label Content="{Binding Speed}" />
+                        <Label Content="{Binding Name}" VerticalContentAlignment="Center"/>
                         <StackPanel>
-                            <ProgressBar Value="{Binding Quantity}" Minimum="0" Maximum="20"
+                            <WrapPanel>
+                                <Label Content="{Binding Strength}" />
+                                <ProgressBar Value="{Binding Strength}" Minimum="0" Maximum="100"
                                         Height="10" Width="150" >
-                                <ProgressBar.Foreground>
-                                    <Binding Path="Quantity" Converter="{StaticResource QuantityToColorConverter}"/>
-                                </ProgressBar.Foreground>
-                            </ProgressBar>
-                            <ProgressBar Value="{Binding Quantity}" Minimum="0" Maximum="20"
+                                    <ProgressBar.Foreground>
+                                        <Binding Path="Strength" Converter="{StaticResource QuantityToColorConverter}"/>
+                                    </ProgressBar.Foreground>
+                                </ProgressBar>
+                            </WrapPanel>
+                            <WrapPanel>
+                                <Label Content="{Binding Speed}" />
+                                <ProgressBar Value="{Binding Speed}" Minimum="0" Maximum="100"
                                         Height="10" Width="150" >
-                                <ProgressBar.Foreground>
-                                    <Binding Path="Quantity" Converter="{StaticResource QuantityToColorConverter}"/>
-                                </ProgressBar.Foreground>
-                            </ProgressBar>
+                                    <ProgressBar.Foreground>
+                                        <Binding Path="Speed" Converter="{StaticResource QuantityToColorConverter}"/>
+                                    </ProgressBar.Foreground>
+                                </ProgressBar>
+                            </WrapPanel>
                         </StackPanel>
                     </WrapPanel>
                 </DataTemplate>
@@ -62,22 +66,26 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-                        <Label Content="{Binding Name}" />
-                        <Label Content="{Binding Strength}" />
-                        <Label Content="{Binding Speed}" />
+                        <Label Content="{Binding Name}" VerticalContentAlignment="Center"/>
                         <StackPanel>
-                            <ProgressBar Value="{Binding Quantity}" Minimum="0" Maximum="20"
+                            <WrapPanel>
+                                <Label Content="{Binding Strength}" />
+                                <ProgressBar Value="{Binding Strength}" Minimum="0" Maximum="100"
                                 Height="10" Width="150" >
-                                <ProgressBar.Foreground>
-                                    <Binding Path="Quantity" Converter="{StaticResource QuantityToColorConverter}"/>
-                                </ProgressBar.Foreground>
-                            </ProgressBar>
-                            <ProgressBar Value="{Binding Quantity}" Minimum="0" Maximum="20"
+                                    <ProgressBar.Foreground>
+                                        <Binding Path="Strength" Converter="{StaticResource QuantityToColorConverter}"/>
+                                    </ProgressBar.Foreground>
+                                </ProgressBar>
+                            </WrapPanel>
+                            <WrapPanel>
+                                <Label Content="{Binding Speed}" />
+                                <ProgressBar Value="{Binding Speed}" Minimum="0" Maximum="100"
                                 Height="10" Width="150" >
-                                <ProgressBar.Foreground>
-                                    <Binding Path="Quantity" Converter="{StaticResource QuantityToColorConverter}"/>
-                                </ProgressBar.Foreground>
-                            </ProgressBar>
+                                    <ProgressBar.Foreground>
+                                        <Binding Path="Speed" Converter="{StaticResource QuantityToColorConverter}"/>
+                                    </ProgressBar.Foreground>
+                                </ProgressBar>
+                            </WrapPanel>
                         </StackPanel>
                     </WrapPanel>
                 </DataTemplate>
